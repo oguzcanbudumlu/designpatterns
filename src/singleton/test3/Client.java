@@ -2,8 +2,14 @@ package singleton.test3;
 
 public class Client {
     public static void main(String[] args) {
+        showCase0();
         showCase1();
         showCase2();
+    }
+
+    private static void showCase0() {
+        System.out.println(SimpleSingleton.getStatic());
+        System.out.println("----------------------------");
     }
 
 

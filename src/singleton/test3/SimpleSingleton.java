@@ -18,4 +18,14 @@ public class SimpleSingleton {
     public void printName() {
         System.out.println(this.name);
     }
+
+
+    public static SimpleSingleton getStatic() {
+        return simpleSingleton;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
