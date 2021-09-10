@@ -1,7 +1,12 @@
 package singleton.test4;
 
-import singleton.test3.SimpleSingleton;
-
+/**
+ * it causes issues in multithreaded environments
+ * because the fact that multiple threads check for null
+ * can cause to create more than one singleton object.
+ * In other words, we make matters worse while trying to
+ * be helpful.
+ */
 public class LazyLoading {
     private static LazyLoading lazyLoading;
 
@@ -15,6 +20,7 @@ public class LazyLoading {
 
     public static LazyLoading getInstance() {
         if(lazyLoading == null) {
+            System.out.println("lazyLoading is null and it will be created");
             lazyLoading = new LazyLoading();
         }
         return lazyLoading;
