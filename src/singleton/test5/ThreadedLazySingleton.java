@@ -17,6 +17,9 @@ public class ThreadedLazySingleton {
     }
 
     public static ThreadedLazySingleton getInstance() {
+        /**
+         * multiple threads see threadedLazySingleton as null at the same time
+         */
         if(threadedLazySingleton == null) {
             System.out.println("threadedLazySingleton is null when the count is " + count + " and it will be created");
             threadedLazySingleton = new ThreadedLazySingleton();
