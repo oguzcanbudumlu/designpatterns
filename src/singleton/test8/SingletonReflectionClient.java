@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
  * private constructor does not prevent client
  * from creating a new object.
  */
-public class ProblemClient {
+public class SingletonReflectionClient {
     public static void main(String[] args) {
         SimpleSingleton simpleSingleton = null;
         for(int i = 0; i <10; i++) {
